@@ -46,15 +46,15 @@ public class Recipe implements Parcelable
 
     }
             ;
-
     protected Recipe(Parcel in) {
-        this.id = ((Integer) in.readValue((Integer.class.getClassLoader())));
-        this.name = ((String) in.readValue((String.class.getClassLoader())));
+        this.id = in.readInt();
+        this.name = in.readString();
         this.ingredients = new ArrayList<>();
         this.steps = new ArrayList<>();
-        this.servings = ((Integer) in.readValue((Integer.class.getClassLoader())));
-        this.image = ((String) in.readValue((String.class.getClassLoader())));
+        this.servings = in.readInt();
+        this.image =in.readString();
     }
+
 
     public Recipe() {
     }

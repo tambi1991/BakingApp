@@ -42,11 +42,11 @@ public class Step implements Parcelable
             ;
 
     protected Step(Parcel in) {
-        this.id = ((Integer) in.readValue((Integer.class.getClassLoader())));
-        this.shortDescription = ((String) in.readValue((String.class.getClassLoader())));
-        this.description = ((String) in.readValue((String.class.getClassLoader())));
-        this.videoURL = ((String) in.readValue((String.class.getClassLoader())));
-        this.thumbnailURL = ((String) in.readValue((String.class.getClassLoader())));
+        this.id = in.readInt();
+        this.shortDescription = in.readString();
+        this.description = in.readString();
+        this.videoURL =in.readString() ;
+        this.thumbnailURL = in.readString();
     }
 
     public Step() {
